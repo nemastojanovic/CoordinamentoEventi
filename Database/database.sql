@@ -3,7 +3,7 @@ use progettoEventi;
 
 -- Struttura della tabella `utente`
 CREATE TABLE `utente` (
-  `id` int(11) NOT NULL PRIMARY KEY,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nome` varchar(20) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `accesso` enum('Amministratore','Ente') DEFAULT NULL,
@@ -13,16 +13,16 @@ CREATE TABLE `utente` (
 
 -- Struttura della tabella `luogo`
 CREATE TABLE `luogo` (
-  `id` int(11) NOT NULL PRIMARY KEY,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `CAP` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `nome` varchar(20) DEFAULT NULL
-
+  `nome` varchar(20) DEFAULT NULL,
+  'registrato' boolean DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- Struttura della tabella `evento`
 CREATE TABLE `evento` (
-  `id` int(11) NOT NULL PRIMARY KEY,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `titolo`varchar(20) NOT NULL,
   `tipo`varchar(20) NOT NULL,
   `orarioInizio`datetime NOT NULL,
