@@ -6,7 +6,7 @@ CREATE TABLE `utente` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `nome` varchar(20) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
-  `accesso` enum('Amministratore','Ente') DEFAULT NULL,
+  `accesso` enum('Amministratore','Ente', 'Normal') DEFAULT NULL,
   `password` binary(64) NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
